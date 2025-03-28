@@ -1,51 +1,101 @@
-# Welcome to your Expo app 👋
+# Interview Eagle 🦅
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Features
+- User authentication with Firebase
+- Interview question generator powered by Together.ai
+- Interactive multiple choice questions
+- Dark/Light mode support
+- File-based routing
 
-## Get started
+## Prerequisites
+- Node.js
+- npm
+- Expo CLI
+- Firebase account
+- Together.ai API key
 
-1. Install dependencies
+## Environment Setup
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+1. Create a `.env` file in the root directory based on `.env.example`:
 ```bash
-npm run reset-project
+# Together.ai config
+EXPO_PUBLIC_TOGETHER_API_KEY=
+EXPO_PUBLIC_TOGETHER_API_URL=https://api.together.xyz/v1/chat/completions
+EXPO_PUBLIC_TOGETHER_MODEL=meta-llama/Llama-3.3-70B-Instruct-Turbo
+EXPO_PUBLIC_TOGETHER_TEMPERATURE=0.9
+EXPO_PUBLIC_TOGETHER_MAX_TOKENS=500
+
+# Firebase config
+EXPO_PUBLIC_FIREBASE_API_KEY=
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
+EXPO_PUBLIC_FIREBASE_APP_ID=
+EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID=
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Getting Started
 
-## Learn more
+1. Install dependencies
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+2. Start the development server
+```bash
+npx expo start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Development Options
 
-## Join the community
+In the development server output, you'll find options to open the app in:
+- [Development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go)
 
-Join our community of developers creating universal apps.
+## Project Structure
+```
+interview-eagle/
+├── app/                   # Main application code
+│   ├── (auth)/           # Authentication screens
+│   ├── (tabs)/           # Tab-based navigation
+│   └── _layout.tsx       # Root layout
+├── components/           # Reusable components
+├── assets/              # Images, fonts, etc.
+├── .env                 # Environment variables (not in git)
+├── .env.example         # Example environment variables
+└── firebaseConfig.js    # Firebase configuration
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# interview-eagle
+## API Keys and Configuration
+
+### Firebase Setup
+1. Create a new project in [Firebase Console](https://console.firebase.google.com/)
+2. Enable Authentication with Email/Password
+3. Copy your Firebase configuration to your `.env` file
+
+### Together.ai Setup
+1. Create an account at [Together.ai](https://www.together.ai/)
+2. Get your API key from the dashboard
+3. Add the API key to your `.env` file
+
+## Learn More
+
+- [Expo documentation](https://docs.expo.dev/)
+- [React Native documentation](https://reactnative.dev/)
+- [Firebase documentation](https://firebase.google.com/docs)
+- [Together.ai documentation](https://docs.together.ai/)
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Submit a pull request
+
+Note: Make sure not to commit any sensitive information or API keys.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
