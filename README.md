@@ -18,21 +18,19 @@
 
 1. Create a `.env` file in the root directory based on `.env.example`:
 ```bash
-# Together.ai config
-EXPO_PUBLIC_TOGETHER_API_KEY=
+EXPO_PUBLIC_TOGETHER_API_KEY=your_api_key_here
 EXPO_PUBLIC_TOGETHER_API_URL=https://api.together.xyz/v1/chat/completions
 EXPO_PUBLIC_TOGETHER_MODEL=meta-llama/Llama-3.3-70B-Instruct-Turbo
 EXPO_PUBLIC_TOGETHER_TEMPERATURE=0.9
 EXPO_PUBLIC_TOGETHER_MAX_TOKENS=500
 
-# Firebase config
-EXPO_PUBLIC_FIREBASE_API_KEY=
-EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=
-EXPO_PUBLIC_FIREBASE_PROJECT_ID=
-EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=
-EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=
-EXPO_PUBLIC_FIREBASE_APP_ID=
-EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID=
+EXPO_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key_here
+EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain_here
+EXPO_PUBLIC_FIREBASE_PROJECT_ID=your_firebase_project_id_here
+EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket_here
+EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id_here
+EXPO_PUBLIC_FIREBASE_APP_ID=your_firebase_app_id_here
+EXPO_PUBLIC_FIREBASE_MEASUREMENT_ID=your_firebase_measurement_id_here
 ```
 
 ## Getting Started
@@ -68,18 +66,6 @@ interview-eagle/
 ├── .env.example         # Example environment variables
 └── firebaseConfig.js    # Firebase configuration
 ```
-
-## API Keys and Configuration
-
-### Firebase Setup
-1. Create a new project in [Firebase Console](https://console.firebase.google.com/)
-2. Enable Authentication with Email/Password
-3. Copy your Firebase configuration to your `.env` file
-
-### Together.ai Setup
-1. Create an account at [Together.ai](https://www.together.ai/)
-2. Get your API key from the dashboard
-3. Add the API key to your `.env` file
 
 ## Learn More
 
